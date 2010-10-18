@@ -27,10 +27,10 @@ Tolk treats I18n.default_locale as the master source of strings to be translated
 As tolk stores all the keys and translated strings in the database, you need to ask Tolk to update it's database from the primary yml file :
 
   $ rake tolk:sync
-  
+
 The above will fetch all the new keys from en.yml and put them in the database. Additionally, it'll also get rid of the deleted keys from the database and reflect updated translations - if any.
 
-If you already have data in your non primary locale files, you will need to import those to Tolk as a one time thing :
+If you already have data in your secondary locale files, you will need to import those to Tolk as a one time thing :
 
   $ rake tolk:import
 
@@ -38,7 +38,7 @@ Upon visiting http://your_app.com/tolk - you will be presented with different op
 
   $ rake tolk:dump_all
 
-This will generate yml files for all non primary locales and put them in #{Rails.root}/config/locales/ directory by default.
+This will generate yml files for all secondary locales and put them in #{Rails.root}/config/locales/ directory by default.
 
 You can use the dump_all method defined in Tolk::Locale directly and pass directory path as the argument if you want the generated files to be at a different location :
 
