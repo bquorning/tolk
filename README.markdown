@@ -34,7 +34,7 @@ If you already have data in your secondary locale files, you will need to import
 
     $ rake tolk:import
 
-Upon visiting http://your_app.com/tolk - you will be presented with different options like creating new locale or providing translations for the existing locales. Once done with translating all the pending strings, you are can write back the new locales to filesystem :
+Upon visiting http://your_app.com/tolk - you will be presented with different options like creating new locale or providing translations for the existing locales. Once done with translating all the pending strings, you can write back the new locales to filesystem :
 
     $ rake tolk:dump_all
 
